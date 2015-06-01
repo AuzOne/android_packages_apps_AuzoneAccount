@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2013 The CyanogenMod Project
+     Copyright (C) 2013 The auzone Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <resources>
-    <string name="app_test">CMAccount Test Auth</string>
+    <string name="app_test">AuzoneAccount Test Auth</string>
     <string name="get_token">Get Token</string>
     <string name="invalidate_token">Invalidate Token</string>
     <string name="expire_token">Expire Token</string>

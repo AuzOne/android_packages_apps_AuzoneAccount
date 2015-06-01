@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2013 The CyanogenMod Project
+     Copyright (C) 2013 The Auzone Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,6 +15,6 @@
      limitations under the License.
 -->
 <resources>
-    <!-- CMAccount server url -->
-    <string name="cmaccount_uri" translatable="false">https://account.cyanogenmod.org</string>
+    <!-- auzoneaccount server url -->
+    <string name="auzoneaccount_uri" translatable="false">https://account.Auzone.org</string>
 </resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2013 The Auzone Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/root"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/header" />
+
+    <FrameLayout android:id="@+id/page"
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:layout_weight="1">
+
+        <ScrollView android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                style="@style/PageContent">
+
+                <TextView
+                    android:id="@+id/auzoneaccount_add_create"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/content_margin_left"
+                    android:paddingRight="@dimen/content_margin_right"
+                    android:textSize="15sp"
+                    style="@style/PageSummaryText"
+                    android:text="@string/auzoneaccount_add_create_label" />
+
+                <Button
+                    android:id="@+id/learn_more_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:paddingLeft="@dimen/content_margin_left"
+                    android:paddingRight="@dimen/content_margin_right"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/auzoneaccount_learn_more"
+                    android:gravity="left"
+                    android:textSize="15sp"
+                    style="@style/PageLink"/>
+
+                <Button
+                    android:id="@+id/existing_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/content_margin_left"
+                    android:layout_marginRight="@dimen/content_margin_right"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/existing" />
+
+                <Button
+                    android:id="@+id/new_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/content_margin_left"
+                    android:layout_marginRight="@dimen/content_margin_right"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/new_account" />
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <include layout="@layout/button_bar" />
+
+</LinearLayout>

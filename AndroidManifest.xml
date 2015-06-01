@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2013 The CyanogenMod Project
+     Copyright (C) 2013 The Auzone Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.cyanogenmod.account"
+        package="com.auzone.account"
         android:versionCode="3">
 
     <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
@@ -40,22 +40,22 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
-    <permission android:name="com.cyanogenmod.account.permission.C2D_MESSAGE"
+    <permission android:name="com.auzone.account.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.cyanogenmod.account.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.auzone.account.permission.C2D_MESSAGE" />
 
     <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="21" />
 
     <application android:label="@string/app_name"
         android:icon="@drawable/icon"
-        android:theme="@style/Theme.CMAccount"
-        android:name=".CMAccount">
+        android:theme="@style/Theme.AuzoneAccount"
+        android:name=".AuzoneAccount">
 
         <meta-data android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <service android:name="com.cyanogenmod.account.auth.AuthService"
+        <service android:name="com.auzone.account.auth.AuthService"
             android:exported="true">
 
             <intent-filter>
@@ -66,7 +66,7 @@
                 android:resource="@xml/authenticator" />
         </service>
 
-        <activity android:name=".ui.CMAccountActivity"
+        <activity android:name=".ui.AuzoneAccountActivity"
             android:label="@string/product_name"
             android:launchMode="singleTop"
             android:excludeFromRecents="true"/>
@@ -83,7 +83,7 @@
 
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <category android:name="com.cyanogenmod.account" />
+                <category android:name="com.auzone.account" />
             </intent-filter>
         </receiver>
 
@@ -94,7 +94,7 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".CMAccount$CMAccountAdminReceiver"
+        <receiver android:name=".AuzoneAccount$AuzoneAccountAdminReceiver"
             android:permission="android.permission.BIND_DEVICE_ADMIN">
             <meta-data android:name="android.app.device_admin"
                 android:resource="@xml/device_admin" />
@@ -124,7 +124,7 @@
                 android:exported="false" />
 
         <provider
-                android:name=".provider.CMAccountProvider"
-                android:authorities="com.cyanogenmod.account.store"/>
+                android:name=".provider.AuzoneAccountProvider"
+                android:authorities="com.auzone.account.store"/>
     </application>
 </manifest>
